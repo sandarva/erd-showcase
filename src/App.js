@@ -1,4 +1,5 @@
 import './App.css';
+import { BrowserRouter } from 'react-router-dom';
 import NavBar from './components/NavBar';
 import Section from './components/Section';
 
@@ -335,14 +336,16 @@ const datas = [
 
 function App() {
   return (
-    <div className="App">
-      <div class="container">
-        <NavBar />
-        {datas.map((data, dataIndex) => {
-          return <Section data={data} key={dataIndex}/>
-        })}
+    <BrowserRouter>
+      <div className="App">
+        <div class="container">
+          <NavBar data={datas}/>
+          {datas.map((data, dataIndex) => {
+            return <Section data={data} key={dataIndex}/>
+          })}
+        </div>
       </div>
-    </div>
+    </BrowserRouter>
   );
 }
 
