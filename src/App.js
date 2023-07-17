@@ -2,11 +2,11 @@ import './App.css';
 import NavBar from './components/NavBar';
 import Section from './components/Section';
 
-const data = [
+const datas = [
   {
     id: 'bank-ms',
     title: "Bank Management System",
-    erDiagram: '/images/Bank Management System ERD.png',
+    erDiagram: '/images/erd/Bank Management System ERD.png',
     entities: ['Customer', 'Account', 'Transaction', 'Branch', 'Employee'],
     relations: [
       {
@@ -26,12 +26,19 @@ const data = [
         relation: "One to Many"
       }
     ],
-    images: []
+    images: [
+      '/images/schemas/bank-management-system/bms-account-ss.png',
+      '/images/schemas/bank-management-system/bms-branch-ss.png',
+      '/images/schemas/bank-management-system/bms-customer-ss.png',
+      '/images/schemas/bank-management-system/bms-employee-ss.png',
+      '/images/schemas/bank-management-system/bms-transaction-ss.png',
+    ],
+    queryFile: ''
   },
   {
     id: 'personal-expense-tracker',
     title: "Personal Expense Tracker",
-    erDiagram: '/images/Personal Expense Tracker ERD.png',
+    erDiagram: '/images/erd/Personal Expense Tracker ERD.png',
     entities: ['User', 'Report', 'Account', 'Income', 'Expense', 'Categories', 'Sub-Categories'],
     relations: [
       {
@@ -67,12 +74,20 @@ const data = [
         relation: "One to One"
       },
     ],
-    images: []
+    images: [
+      '/images/schemas/personal-expense-tracker/pet-account-ss.png',
+      '/images/schemas/personal-expense-tracker/pet-user-ss.png',
+      '/images/schemas/personal-expense-tracker/pet-income-ss.png',
+      '/images/schemas/personal-expense-tracker/pet-expense-ss.png',
+      '/images/schemas/personal-expense-tracker/pet-categories-ss.png',
+      '/images/schemas/personal-expense-tracker/pet-sub_categories-ss.png',
+    ],
+    queryFile: ''
   },
   {
     id: 'blood-ms',
-    title: "Blood Management System",
-    erDiagram: '/images/Blood Management System ERD.png',
+    title: "Blood Bank Management System",
+    erDiagram: '/images/erd/Blood Bank Management System ERD.png',
     entities: ['Doner', 'Receipent', 'Blood', 'Blood Type', 'Employee'],
     relations: [
       {
@@ -92,12 +107,13 @@ const data = [
         relation: "Many to One"
       }
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'employee-ms',
     title: "Employee Management System",
-    erDiagram: '/images/Employee Management System ERD.png',
+    erDiagram: '/images/erd/Employee Management System ERD.png',
     entities: ['Department', 'Payroll', 'Qualification', 'Leave', 'Employee'],
     relations: [
       {
@@ -117,12 +133,13 @@ const data = [
         relation: "One to One"
       }
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'inventory-ms',
     title: "Inventory Management System",
-    erDiagram: '/images/Inventory Management System ERD.png',
+    erDiagram: '/images/erd/Inventory Management System ERD.png',
     entities: ['Admin', 'Inventory', 'User', 'Item', 'Category', 'Vendor'],
     relations: [
       {
@@ -150,12 +167,13 @@ const data = [
         relation: "One to One"
       }
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'library-ms',
     title: "Library Management System",
-    erDiagram: '/images/Library Management System ERD.png',
+    erDiagram: '/images/erd/Library Management System ERD.png',
     entities: ['Admin', 'Book', 'Author', 'Member', 'Employee'],
     relations: [
       {
@@ -179,12 +197,13 @@ const data = [
         relation: "One to Many"
       }
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'parking-ms',
     title: "Parking Lot Management System",
-    erDiagram: '/images/Parking Lot Management System ERD.png',
+    erDiagram: '/images/erd/Parking Lot Management System ERD.png',
     entities: ['Parking Lot', 'Floor', 'Slot', 'user'],
     relations: [
       {
@@ -200,12 +219,13 @@ const data = [
         relation: "One to One"
       }
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'restaurant-ms',
     title: "Restaurant Management System",
-    erDiagram: '/images/Restaurant Management System ERD.png',
+    erDiagram: '/images/erd/Restaurant Management System ERD.png',
     entities: ['Customer', 'Admin', 'Food', 'Order', 'Employee', 'Bill'],
     relations: [
       {
@@ -230,12 +250,13 @@ const data = [
       },
       
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'room-ms',
     title: "Room Management System",
-    erDiagram: '/images/Room Management System ERD.png',
+    erDiagram: '/images/erd/Room Management System ERD.png',
     entities: ['Customer', 'Room', 'Item', 'Admin', 'Employee'],
     relations: [
       {
@@ -255,12 +276,13 @@ const data = [
         relation: "One to One"
       }
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'school-ms',
     title: "School Management System",
-    erDiagram: '/images/School Management System ERD.png',
+    erDiagram: '/images/erd/School Management System ERD.png',
     entities: ['Admin', 'Student', 'Teacher', 'Admin', 'Class', 'Course', 'Employee'],
     relations: [
       {
@@ -288,12 +310,13 @@ const data = [
         relation: "One to Many"
       }
     ],
-    images: []
+    images: [],
+    queryFile: ''
   },
   {
     id: 'tournament-ms',
     title: "Tournament Management System",
-    erDiagram: '/images/Tournament Management System ERD.png',
+    erDiagram: '/images/erd/Tournament Management System ERD.png',
     entities: ['Tournament', 'Team', 'Player'],
     relations: [
       {
@@ -305,8 +328,9 @@ const data = [
         relation: "One to Many"
       }
     ],
-    images: []
-  },
+    images: [],
+    queryFile: ''
+  }
 ]
 
 function App() {
@@ -314,7 +338,9 @@ function App() {
     <div className="App">
       <div class="container">
         <NavBar />
-        <Section data={data}/>
+        {datas.map((data, dataIndex) => {
+          return <Section data={data} key={dataIndex}/>
+        })}
       </div>
     </div>
   );
