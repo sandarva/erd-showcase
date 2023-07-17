@@ -33,7 +33,7 @@ const Section = ({ data }) => {
                     data.queryFile.length > 0 ? 
                     <div className="query__container">
                         <h3>Query File Link</h3>
-                        <a href="#">Link To SQL files</a>
+                        <a href={data.queryFile} className='btn' target='__blank'>Link To SQL files</a>
                     </div>
                     : ""
                 }
@@ -45,7 +45,7 @@ const Section = ({ data }) => {
                         <div className="images">
                             {data.images.map((image, imageIndex) => {
                                 return (
-                                    <img src={image} alt="screenshot" />
+                                    <img src={image} key={imageIndex} alt="screenshot" />
                                 )
                             })}
                         </div>

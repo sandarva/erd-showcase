@@ -73,6 +73,21 @@ caption{
     border-radius: 8px;
 }
 
+.btn{
+    display: inline-block;
+    text-decoration: none;
+    background-color: cornflowerblue;
+    color: white;
+    padding: 0.55rem 1rem;
+    border-radius: 8px;
+    cursor: pointer;
+    margin-top: 1rem;
+}
+
+.btn:hover{
+    background-color: rgb(59, 120, 232);
+}
+
 @media (min-width: 720px) {
     .container{
         width: 65%;

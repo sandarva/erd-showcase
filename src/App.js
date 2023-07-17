@@ -33,7 +33,7 @@ const datas = [
       '/images/schemas/bank-management-system/bms-employee-ss.png',
       '/images/schemas/bank-management-system/bms-transaction-ss.png',
     ],
-    queryFile: ''
+    queryFile: 'https://github.com/sandarva/erd-showcase/tree/main/sql/bank-management-system'
   },
   {
     id: 'personal-expense-tracker',
@@ -82,7 +82,7 @@ const datas = [
       '/images/schemas/personal-expense-tracker/pet-categories-ss.png',
       '/images/schemas/personal-expense-tracker/pet-sub_categories-ss.png',
     ],
-    queryFile: ''
+    queryFile: 'https://github.com/sandarva/erd-showcase/tree/main/sql/personal-expense-tracker'
   },
   {
     id: 'blood-ms',
